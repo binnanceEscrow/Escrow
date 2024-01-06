@@ -10,7 +10,7 @@ function startEscrow() {
     var completeTransactionButton = document.getElementById('completeTransactionButton');
 
     if (receiverAddress.length < 28) {
-        resultElement.innerHTML = "Invalid receiver's USDT address.";
+        resultElement.innerHTML = "Invalid receiver's USDT addressbest extension sfor java.";
         return;
 
     }
@@ -82,3 +82,13 @@ function scrollToTop() {
     }, 15);
 }
 
+function copyToClipboard(elementId) {
+    var range = document.createRange();
+    var selection = window.getSelection();
+    var element = document.getElementById(elementId);
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand('copy');
+    selection.removeAllRanges();
+}
